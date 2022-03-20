@@ -1,0 +1,69 @@
+{
+	"name": "npvdkgrs",
+	"version": "1.0.0",
+	"description": "This project contains a mathematical presentation and a demonstration code of the Non-interactive Publicly Verifiable Distributed Key Generation and Resharing algorithm",
+	"homepage": "https://github.com/natrixofficial/npvdkgrs.git#readme",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/natrixofficial/npvdkgrs.git"
+	},
+	"main": "dist/main.js",
+	"scripts": {
+		"shx": "./node_modules/.bin/shx",
+		"tsc": "./node_modules/.bin/tsc",
+		"clean": "shx rm -rf dist && shx rm -rf tsconfig.tsbuildinfo",
+		"build-ts": "tsc --project tsconfig.build.json",
+		"build": "npm run lint && npm run build-ts",
+		"build:clean": "npm run lint && npm run clean && npm run build-ts",
+		"start": "npm run build:clean && node ./dist/main.js",
+		"lint": "tsc --noEmit && eslint \"src/**/*.{js,ts}\"",
+		"lint-fix": "tsc --noEmit && eslint \"src/**/*.{js,ts}\" --fix"
+	},
+	"files": [
+		"dist",
+		"LICENSE",
+		"README.md"
+	],
+	"keywords": [
+		"DKG",
+		"dkg",
+		"non-interactive",
+		"publicly verifiable",
+		"key resharing",
+		"PVSS",
+		"PVSH"
+	],
+	"author": "NATRIX <info@natrix.io> (https://natrix.io)",
+	"license": "AGPL-3.0-or-later",
+	"dependencies": {
+		"bls-eth-wasm": "^1.0.3",
+		"bls-wasm": "^0.4.7",
+		"mcl-wasm": "^1.0.0",
+		"reflect-metadata": "^0.1.13"
+	},
+	"devDependencies": {
+		"@types/eslint": "^8.4.1",
+		"@types/node": "^16.11.6",
+		"@typescript-eslint/eslint-plugin": "^5.12.1",
+		"@typescript-eslint/parser": "^5.12.1",
+		"eslint": "^8.10.0",
+		"eslint-config-prettier": "^8.4.0",
+		"eslint-plugin-prettier": "^4.0.0",
+		"husky": "^7.0.4",
+		"lint-staged": "^12.3.4",
+		"prettier": "^2.5.1",
+		"shx": "^0.3.4",
+		"ts-node": "^10.5.0",
+		"typescript": "^4.5.5"
+	},
+	"lint-staged": {
+		"src/**/*.{js,ts}": [
+			"git add"
+		]
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "lint-staged"
+		}
+	}
+}
