@@ -117,7 +117,7 @@ function runNPVDKGRSExample(): void {
 	}
 	let hrend = process.hrtime(hrstart);
 	let avg = (hrend[0] * 1000 + hrend[1] / 1000000) / members.length;
-	console.log(` => Done, avarage time: ${avg}ms`);
+	console.log(` => Done, average time: ${avg}ms`);
 
 	//Each member calculate its own key
 	console.log("All members check all contribution and calculate its own keys...");
@@ -133,7 +133,7 @@ function runNPVDKGRSExample(): void {
 	}
 	hrend = process.hrtime(hrstart);
 	avg = (hrend[0] * 1000 + hrend[1] / 1000000) / members.length;
-	console.log(` => Done, avarage time: ${avg}ms`);
+	console.log(` => Done, average time: ${avg}ms`);
 
 	console.log("Test generated keys and create signatures");
 	const msg = "NPVDKGRS is awsome!";
@@ -201,7 +201,7 @@ function runNPVDKGRSExample(): void {
 	}
 	hrend = process.hrtime(hrstart);
 	avg = (hrend[0] * 1000 + hrend[1] / 1000000) / members.length;
-	console.log(` => Done, avarage time: ${avg}ms`);
+	console.log(` => Done, average time: ${avg}ms`);
 
 	//Each member calculate its own key
 	console.log("All new members check all contribution and calculate its own keys...");
@@ -216,7 +216,7 @@ function runNPVDKGRSExample(): void {
 	}
 	hrend = process.hrtime(hrstart);
 	avg = (hrend[0] * 1000 + hrend[1] / 1000000) / members.length;
-	console.log(` => Done, avarage time: ${avg}ms`);
+	console.log(` => Done, average time: ${avg}ms`);
 
 	console.log("Test newly generated keys and create signatures");
 	const newSigs: { id: IdType; sig: SignatureType }[] = [];
@@ -296,7 +296,7 @@ function runNPVDKGRSExample(): void {
 	}
 	hrend = process.hrtime(hrstart);
 	avg = (hrend[0] * 1000 + hrend[1] / 1000000) / members.length;
-	console.log(` => Done, avarage time: ${avg}ms`);
+	console.log(` => Done, average time: ${avg}ms`);
 
 	//Each member calculate its own key
 	console.log("All new members check all contribution and calculate its own keys...");
@@ -311,7 +311,7 @@ function runNPVDKGRSExample(): void {
 	}
 	hrend = process.hrtime(hrstart);
 	avg = (hrend[0] * 1000 + hrend[1] / 1000000) / members.length;
-	console.log(` => Done, avarage time: ${avg}ms`);
+	console.log(` => Done, average time: ${avg}ms`);
 
 	console.log("Test newly generated keys and create signatures");
 	const addedNewSigs: { id: IdType; sig: SignatureType }[] = [];

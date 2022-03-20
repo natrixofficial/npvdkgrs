@@ -47,7 +47,7 @@ I would like to mention that Ethereum 2.0 is using BLS12-381.
 ### Math
 
 The math of the algorithm can be found at `./math/NPVDKGRS.pdf`.
-The algorithm was peer-reviewed and a preliminary security analysis token place. Later we will descuss more and update a documentations.
+The algorithm was peer-reviewed and a preliminary security analysis token place. Later we will discuss more and update a documentation.
 
 **I found a security issue or I just want to talk about it, what can I do?**
 If you found some bug or security issue or just would like to discuss about the algorithm, please contact us at info@natrix.io.
@@ -95,7 +95,7 @@ The demo output contains 6 parts:
 #### Publicly Verifiable Secret Sharing algorithm
 
 The `sh` is the original secret and `sh'` is the decoded secret.
-`ESH` is the chiper text and the verification vector (non-interactive zero knowledge proof)
+`ESH` is the cipher text and the verification vector (non-interactive zero knowledge proof)
 
 ```
 PK : 766af1e437612b2e402898954c451bd525ae894c7215fbb7de36ec71919613e3fb221247aeda46334df9b37a0aed9e192e4f74e9e168a0f9fa66003b9f0411ba4a65b21e5b72e101cc7066ed6f6905900138d71ba08c7f0ca4786e31268ef412
@@ -109,7 +109,7 @@ Verification result: No Error
 ESH: 2b1d56b6118790145f2888c6430f401aab99a7cee6360299754ab14f541f3672.d7b191d4db0eb86867b811e0d4679e27c0222ecfac42439609cc8f7c4388fc0d511b96fe750b1de4a793bced6233320305d8edcb0b85ef36ca8d58f1b719f8501370f8f62ed16fcb653b65cf9854b4f83da0311d71bbf8999771a01ef5572400.bb2dd21c680bcc718cd61ec7940bdaf88830ee1e6e14d798fcce8dde3a01b22214eaea0ebc29c07a8bef2e15cae41186
 ```
 
-#### Speed test of PVSH Encrypt, Verify and Decrpt methods
+#### Speed test of PVSH Encrypt, Verify and Decrypt methods
 
 These test were run on an 11th Gen Intel(R) Core(TM) i7-1165G7 @ 2.80GHz processor.
 Note: these results are based on a Webassembly implementation using JavaScript. Native C library can achieve faster speed. This project is a demonstration only project!
@@ -146,9 +146,9 @@ Avg decrypt time: 5.7394ms
 ```
 2-of-3 threshold signature example
 All members generating share contribution to generate the threshold keys...
- => Done, avarage time: 28.307599999999997ms
+ => Done, average time: 28.307599999999997ms
 All members check all contribution and calculate its own keys...
- => Done, avarage time: 198.86389999999997ms
+ => Done, average time: 198.86389999999997ms
 Test generated keys and create signatures
  => Recovered sig: 51b032ab42d5d0f0cd80247ffb8928eca49dfd963db7792874fa123ea838db70504e4d32c15982d7b0f39ce3974fe797
  => Recovered sig verification result (SigCount=1, threshold=2): false
@@ -163,9 +163,9 @@ From the previous members are reshare their keys to totally new members and also
 ```
 3-of-4 threshold signature with resharing to totally new members.
 The 't' number of old members generating share contribution to generate the threshold keys...
- => Done, avarage time: 25.9265ms
+ => Done, average time: 25.9265ms
 All new members check all contribution and calculate its own keys...
- => Done, avarage time: 240.49406666666667ms
+ => Done, average time: 240.49406666666667ms
 Test newly generated keys and create signatures
  => Recovered sig: 1e90a7b277cb7f39ff289b5c8afd60af9b559001d146fc26694f840020f586363b5341a627e7f0fff346334047519101
  => Recovered sig verification result (SigCount=1, threshold=3): false
@@ -180,9 +180,9 @@ Test newly generated keys and create signatures
 ```
 4-of-5 threshold signature with resharing to original and added two new members.
 The 't' number of old members generating share contribution to generate the threshold keys...
- => Done, avarage time: 31.615633333333335ms
+ => Done, average time: 31.615633333333335ms
 All new members check all contribution and calculate its own keys...
- => Done, avarage time: 386.0589ms
+ => Done, average time: 386.0589ms
 Test newly generated keys and create signatures
  => Recovered sig: 723751f26a2c3568e02d25ae3f8d267dfc41bbec4d5da221a4985c3ad0ad5b5a7a5483967410efa77177189185c26110
  => Recovered sig verification result (SigCount=1, threshold=4): false
