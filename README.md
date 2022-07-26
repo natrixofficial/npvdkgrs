@@ -72,7 +72,7 @@ git clone https://github.com/natrixofficial/npvdkgrs.git
 2. install dependencies
 
 ```
-npm run install
+npm install
 ```
 
 3. run the demo
@@ -151,9 +151,9 @@ All members check all contribution and calculate its own keys...
  => Done, average time: 198.86389999999997ms
 Test generated keys and create signatures
  => Recovered sig: 51b032ab42d5d0f0cd80247ffb8928eca49dfd963db7792874fa123ea838db70504e4d32c15982d7b0f39ce3974fe797
- => Recovered sig verification result (SigCount=1, threshold=2): false
+ => Recovered sig verification result (SigCount=1, threshold=2, total number=3): false
  => Recovered sig: 0c605417e6f8bc427090295142864b2fc8bc0f1f2014a57ab73eb729cff0a3f8624fb9863436b763fae91c1f6e253686
- => Recovered sig verification result (SigCount=2, threshold=2): true
+ => Recovered sig verification result (SigCount=2, threshold=2, total number=3): true
 ```
 
 #### The previous participants reshares the keys
@@ -168,11 +168,11 @@ All new members check all contribution and calculate its own keys...
  => Done, average time: 240.49406666666667ms
 Test newly generated keys and create signatures
  => Recovered sig: 1e90a7b277cb7f39ff289b5c8afd60af9b559001d146fc26694f840020f586363b5341a627e7f0fff346334047519101
- => Recovered sig verification result (SigCount=1, threshold=3): false
+ => Recovered sig verification result (SigCount=1, threshold=3, total number=4): false
  => Recovered sig: 208cef66a563a4c720f3d033c29048837d3f51eabd154e3106ec58886cf35c84ed7aec51240171828c7be7f1c7ec4105
- => Recovered sig verification result (SigCount=2, threshold=3): false
+ => Recovered sig verification result (SigCount=2, threshold=3, total number=4): false
  => Recovered sig: 0c605417e6f8bc427090295142864b2fc8bc0f1f2014a57ab73eb729cff0a3f8624fb9863436b763fae91c1f6e253686
- => Recovered sig verification result (SigCount=3, threshold=3): true
+ => Recovered sig verification result (SigCount=3, threshold=3, total number=4): true
 ```
 
 #### The original members are adding two new members to the original group
@@ -185,13 +185,13 @@ All new members check all contribution and calculate its own keys...
  => Done, average time: 386.0589ms
 Test newly generated keys and create signatures
  => Recovered sig: 723751f26a2c3568e02d25ae3f8d267dfc41bbec4d5da221a4985c3ad0ad5b5a7a5483967410efa77177189185c26110
- => Recovered sig verification result (SigCount=1, threshold=4): false
+ => Recovered sig verification result (SigCount=1, threshold=4, total number=5): false
  => Recovered sig: f5c58ca0124614d0bf38372877c77ac0e5049a2d7223581a45e3d656205c5c2d008824b679da33b476985ce614068805
- => Recovered sig verification result (SigCount=2, threshold=4): false
+ => Recovered sig verification result (SigCount=2, threshold=4, total number=5): false
  => Recovered sig: c1169f58992ee7c6b85fcba1529c251ac2e09290729e72cb3fc808cc3a6d7340f8b8f7e96dd6b732735ba96ac39f0205
- => Recovered sig verification result (SigCount=3, threshold=4): false
+ => Recovered sig verification result (SigCount=3, threshold=4, total number=5): false
  => Recovered sig: 0c605417e6f8bc427090295142864b2fc8bc0f1f2014a57ab73eb729cff0a3f8624fb9863436b763fae91c1f6e253686
- => Recovered sig verification result (SigCount=4, threshold=4): true
+ => Recovered sig verification result (SigCount=4, threshold=4, total number=5): true
 ```
 
 #### Keys from part 3-4-5

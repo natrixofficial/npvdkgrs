@@ -159,7 +159,9 @@ function runNPVDKGRSExample(): void {
 		const sigVerified = members[0].PG?.verify(finalSig, msg);
 		console.log(` => Recovered sig: ${finalSig.serializeToHexStr()}`);
 		console.log(
-			` => Recovered sig verification result (SigCount=${sigs.length}, threshold=${t}): ${Boolean(sigVerified)}`,
+			` => Recovered sig verification result (SigCount=${sigs.length}, threshold=${t}, total number=${n}): ${Boolean(
+				sigVerified,
+			)}`,
 		);
 	}
 
@@ -241,7 +243,9 @@ function runNPVDKGRSExample(): void {
 		const sigVerified = newMembers[0].PG?.verify(finalSig, msg);
 		console.log(` => Recovered sig: ${finalSig.serializeToHexStr()}`);
 		console.log(
-			` => Recovered sig verification result (SigCount=${newSigs.length}, threshold=${t + 1}): ${Boolean(sigVerified)}`,
+			` => Recovered sig verification result (SigCount=${newSigs.length}, threshold=${t + 1}, total number=${
+				n + 1
+			}): ${Boolean(sigVerified)}`,
 		);
 	}
 
@@ -336,9 +340,9 @@ function runNPVDKGRSExample(): void {
 		const sigVerified = addedNewMembers[0].PG?.verify(finalSig, msg);
 		console.log(` => Recovered sig: ${finalSig.serializeToHexStr()}`);
 		console.log(
-			` => Recovered sig verification result (SigCount=${addedNewSigs.length}, threshold=${t + 2}): ${Boolean(
-				sigVerified,
-			)}`,
+			` => Recovered sig verification result (SigCount=${addedNewSigs.length}, threshold=${t + 2}, total number=${
+				n + 2
+			}): ${Boolean(sigVerified)}`,
 		);
 	}
 
